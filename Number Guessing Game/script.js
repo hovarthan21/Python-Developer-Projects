@@ -12,7 +12,6 @@ canvas.height = window.innerHeight;
 
 let confettiPieces = [];
 
-// Confetti generator
 function createConfetti() {
   confettiPieces = [];
   for (let i = 0; i < 150; i++) {
@@ -26,7 +25,6 @@ function createConfetti() {
   }
 }
 
-// Animate confetti
 function drawConfetti() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   confettiPieces.forEach(p => {
@@ -85,7 +83,6 @@ restartBtn.addEventListener("click", () => {
   });
 });
 
-// Mode buttons
 document.getElementById("singleBtn").addEventListener("click", () => {
   fetch("/mode", {
     method: "POST",
@@ -106,7 +103,6 @@ document.getElementById("twoBtn").addEventListener("click", () => {
   });
 });
 
-// Set number (for two-player mode)
 document.getElementById("setNumberBtn").addEventListener("click", () => {
   const num = document.getElementById("setNumberInput").value;
   fetch("/set_number", {
@@ -119,3 +115,4 @@ document.getElementById("setNumberBtn").addEventListener("click", () => {
     document.getElementById("setNumberBox").style.display = "none";
   });
 });
+
