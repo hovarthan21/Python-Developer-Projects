@@ -18,7 +18,7 @@ body {
 }
 
 .game-container {
-  background: #FFD700; /* Yellow box */
+  background: #FFD700; 
   padding: 40px;
   border-radius: 20px;
   text-align: center;
@@ -76,7 +76,6 @@ button:hover {
   transition: width 0.5s ease;
 }
 
-/* Popup */
 .popup {
   display: none;
   position: fixed;
@@ -96,7 +95,6 @@ button:hover {
   100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 }
 
-/* Confetti */
 #confettiCanvas {
   position: fixed;
   top: 0;
@@ -106,3 +104,4 @@ button:hover {
   pointer-events: none;
   z-index: 999;
 }
+
