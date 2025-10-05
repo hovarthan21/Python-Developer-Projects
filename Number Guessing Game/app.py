@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import random
+import os
 
 app = Flask(__name__)
 
@@ -8,29 +9,19 @@ game_state = {
     "attempts": 0,
     "mode": "single" 
 }
-#.............
-from flask import Flask, render_template, request, jsonify
-import random
-import os
-
-app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # This will serve your existing index.html
     return render_template('index.html')
-
-# Add API endpoints if your JS needs to communicate with Python
 @app.route('/check_guess', methods=['POST'])
 def check_guess():
     data = request.json
     user_guess = int(data['guess'])
-    # Add your Python game logic here if needed
     return jsonify({'result': 'success'})
 
 if __name__ == '__main__':
     app.run(debug=True)
-#...............
+
 @app.route("/")
 def index():
     return render_template("index.html")
