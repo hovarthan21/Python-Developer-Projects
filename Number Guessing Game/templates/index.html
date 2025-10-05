@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess The Number</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="game-container">
+    <h1>🎯 Guess The Number</h1>
+    <p class="instructions">I'm thinking of a number between <b>1 and 100</b>. Can you guess it?</p>
+
+    <div class="mode-buttons">
+      <button id="singleBtn">👤 Single Player</button>
+      <button id="twoBtn">👥 Two Player</button>
+    </div>
+
+    <div id="setNumberBox" style="display:none;">
+      <input type="number" id="setNumberInput" placeholder="Player 1: Enter a number">
+      <button id="setNumberBtn">Set Number</button>
+    </div>
+
+    <div id="gameBox">
+      <input type="number" id="userInput" placeholder="Enter your guess">
+      <button id="guessBtn">Guess</button>
+      <button id="restartBtn">Restart</button>
+      
+      <p id="message"></p>
+      <p id="attempts">Attempts: 0</p>
+      
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="popup" class="popup">🎉 You Win! 🎉</div>
+  <canvas id="confettiCanvas"></canvas>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
