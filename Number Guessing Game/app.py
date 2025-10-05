@@ -22,10 +22,6 @@ def check_guess():
 if __name__ == '__main__':
     app.run(debug=True)
 
-@app.route("/")
-def index():
-    return render_template("index.html")
-
 @app.route("/guess", methods=["POST"])
 def guess():
     data = request.get_json()
