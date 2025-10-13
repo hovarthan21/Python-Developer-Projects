@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>File Nexus</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="wrap">
+    <header class="topbar">
+      <h1 style="font-size: 40px;">File Nexus – a hub for all file operations.</h1>
+      <p class="subtitle">Upload, preview, find & replace, save, and download files</p>
+    </header>
+
+    <section class="panel upload-panel">
+      <div class="upload-left">
+        <label class="dropzone" id="dropzone">
+          <input type="file" id="fileInput" accept=".txt,.md,.csv,.log,.pdf,.doc,.docx" hidden>
+          <div>
+            <strong>Drag & drop</strong> or <button id="chooseBtn" class="link-btn">choose a file</button>
+            <p class="muted">Supported: .txt .md .csv .log .pdf .doc .docx</p>
+          </div>
+        </label>
+
+        <div class="progress-container" id="progressContainer" style="display:none;">
+          <div class="progress-bar" id="progressBar">0%</div>
+        </div>
+      </div>
+
+      <div class="upload-right">
+        <h3>Uploaded files</h3>
+        <ul id="fileList" class="file-list"></ul>
+      </div>
+    </section>
+
+    <section class="panel editor-panel">
+      <div class="editor-left">
+        <div class="controls">
+          <select id="fileSelect" class="select-file">
+            <option value="">— Select file to preview —</option>
+          </select>
+          <div class="control-buttons">
+            <button id="downloadBtn">Download</button>
+            <button id="deleteBtn" class="danger">Delete</button>
+          </div>
+        </div>
+
+        <textarea id="fileContent" placeholder="Select a text file to load content..." rows="14"></textarea>
+        <div id="binaryNotice" class="muted" style="display:none; margin-top:8px;">
+          Binary file selected — preview not available. Use Download to get the file.
+        </div>
+      </div>
+
+      <div class="editor-right">
+        <h3>Find & Replace</h3>
+        <label>Find</label>
+        <input id="findInput" placeholder="text to find">
+        <label>Replace</label>
+        <input id="replaceInput" placeholder="replacement text">
+        <label>
+          <input type="checkbox" id="replaceAll" checked> Replace all occurrences
+        </label>
+        <button id="replaceBtn" class="accent">Replace & Save</button>
+
+        <div class="status" id="statusBox"></div>
+        <div class="tips">
+          <p><strong>Tip:</strong> Use for logs, CSV headers, or text sanitization. Find/Replace works for text files only.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <h3>Built with ❤️ by Hovarthan S | File Nexus</h3>
+    </footer>
+  </main>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
