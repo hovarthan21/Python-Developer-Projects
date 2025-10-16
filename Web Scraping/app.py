@@ -1,4 +1,5 @@
 import streamlit as st
+from bs4 import BeautifulSoup
 from utils import scrape_headings, scrape_content
 
 st.set_page_config(page_title="Web Scraper App", page_icon="🕵️‍♂️", layout="wide")
