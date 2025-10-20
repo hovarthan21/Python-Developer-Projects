@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Report</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="glass-card" style="width:2000px;">
+      <h2>Weekly Report for {{ username }}</h2>
+
+      <h3>Total Converted Per Currency</h3>
+      <ul>
+        {% for currency, total in totals.items() %}
+        <li>{{ currency }} : {{ total }}</li>
+        {% endfor %}
+      </ul>
+
+      <div class="table-container">
+        <table>
+          <tr><th>Date</th><th>Amount</th><th>From</th><th>To</th><th>Result</th></tr>
+          {% for row in history %}
+            <tr>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] }}</td>
+              <td>{{ row[3] }}</td>
+              <td>{{ row[4] }}</td>
+              <td>{{ row[5] }}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <a href="{{ url_for('converter') }}" style="color:white; display:block; margin-top:20px;">Back</a>
+    </div>
+  </div>
+</body>
+</html>
