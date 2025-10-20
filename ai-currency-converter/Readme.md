@@ -37,7 +37,7 @@ Built with a modern and powerful tech stack to deliver **speed**, **accuracy**, 
 
 ## 🚀 Live Demo
 
-👉 [**Open AI Currency Converter App**](https://to-do-list-app-01.streamlit.app/)  
+👉 [**Open AI Currency Converter App**](https://ai-currency-converter-rj1v.onrender.com/)  
 
 ---
 
