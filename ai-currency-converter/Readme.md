@@ -35,6 +35,12 @@ Built with a modern and powerful tech stack to deliver **speed**, **accuracy**, 
 
 ---
 
+## 🚀 Live Demo
+
+👉 [**Open AI Currency Converter App**](https://to-do-list-app-01.streamlit.app/)  
+
+---
+
 ##  Key Features
 
 -  Real-time conversion of **all world currencies**  
