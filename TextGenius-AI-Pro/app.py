@@ -4,7 +4,9 @@ import re
 from collections import Counter
 import string
 
-app = Flask(__name__)
+
+app = Flask(__name__, static_folder='static')
+
 
 def analyze_text(text):
     """Analyze text and return word count, character count, line count and word frequency"""
