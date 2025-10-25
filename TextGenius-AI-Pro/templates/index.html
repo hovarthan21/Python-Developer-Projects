@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextGenius AI Pro | Advanced Text Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-chart-bar"></i>
+                <h1>TextGenius AI <span>Pro</span></h1>
+            </div>
+            <p class="tagline">Advanced text analysis at your fingertips</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <div class="input-header">
+                    <h2>Enter Your Text</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop a file here or <span>browse</span></p>
+                        <input type="file" id="fileInput" accept=".txt,.doc,.docx,.pdf">
+                    </div>
+                </div>
+                
+                <div class="text-input">
+                    <textarea id="textInput" placeholder="Paste your text here or upload a file..."></textarea>
+                    <div class="text-actions">
+                        <button id="clearBtn" class="btn-secondary">
+                            <i class="fas fa-eraser"></i> Clear
+                        </button>
+                        <button id="analyzeBtn" class="btn-primary">
+                            <i class="fas fa-chart-pie"></i> Analyze Text
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <div class="results-header">
+                    <h2>Analysis Results</h2>
+                    <button id="exportBtn" class="btn-secondary">
+                        <i class="fas fa-download"></i> Export Results
+                    </button>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="wordCount">0</h3>
+                            <p>Words</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-text-height"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="charCountWithSpaces">0</h3>
+                            <p>Characters (with spaces)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-text-width"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="charCountWithoutSpaces">0</h3>
+                            <p>Characters (without spaces)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-align-left"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="lineCount">0</h3>
+                            <p>Lines</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-paragraph"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="paragraphCount">0</h3>
+                            <p>Paragraphs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-sentence"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="sentenceCount">0</h3>
+                            <p>Sentences</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-ruler"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="avgWordLength">0</h3>
+                            <p>Avg. Word Length</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="readingTime">0</h3>
+                            <p>Reading Time (min)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="word-frequency">
+                    <h3>Most Common Words</h3>
+                    <div id="wordFrequencyChart" class="frequency-chart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing your text...</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 TextGenius AI Pro | Advanced Text Analysis Tool by Hovarthan S</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
