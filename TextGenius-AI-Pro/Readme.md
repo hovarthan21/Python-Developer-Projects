@@ -27,6 +27,12 @@ This application supports **file upload** or **direct input**, enabling users su
 
 ---
 
+##  Watch Here 
+
+👉 [**Text Genius AI Pro**](https://drive.google.com/file/d/1bjGcOUeDOUS-YRgsd7yiil9aYfKo7sMm/view?usp=sharing)  
+
+---
+
 ##  Features
 
 | Feature | Description |
