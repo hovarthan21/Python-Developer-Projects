@@ -1,6 +1,4 @@
-<div align="center">
 
-<img src="https://img.shields.io/badge/🛣️_RoadMind_AI-FF5A1F?style=for-the-badge&logoColor=white" alt="RoadMind AI" height="60"/>
 
 # RoadMind AI
 
@@ -20,13 +18,13 @@
 
 <br/>
 
-![RoadMind AI Banner](https://img.shields.io/badge/-_🗺️_Live_Map_·_⚠️_Hazard_Scan_·_📷_Road_Images_·_🔀_Smart_Routes_-1C1C1C?style=for-the-badge)
+![RoadMind AI Banner](https://img.shields.io/badge/-__Live_Map_·__Hazard_Scan_·__Road_Images_·__Smart_Routes_-1C1C1C?style=for-the-badge)
 
 </div>
 
 ---
 
-## 📖 About
+##  About
 
 **RoadMind AI** is a free, real-time road intelligence platform built for engineers, commuters, infrastructure planners, and logistics teams. It transforms any two locations into a comprehensive road health report — powered entirely by open-source geospatial APIs with zero cost.
 
@@ -36,7 +34,7 @@ Unlike conventional navigation apps, RoadMind AI is purpose-built for **infrastr
 
 ---
 
-## 🎯 Why RoadMind AI?
+##  Why RoadMind AI?
 
 | Problem | RoadMind AI Solution |
 |---|---|
@@ -49,16 +47,16 @@ Unlike conventional navigation apps, RoadMind AI is purpose-built for **infrastr
 
 ### Ideal Use Cases
 
-- 🏗️ **Civil & Infrastructure Engineering** — Pre-survey route checks before site visits
-- ⛏️ **Mining & Quarrying Logistics** — Heavy vehicle route clearance checks
-- 🚇 **Tunnel & Underground Projects** — Access road monitoring for construction teams
-- 🚚 **Fleet & Logistics Management** — Real-time route hazard briefings
-- 🗺️ **Urban Planning** — Road health mapping across city corridors
-- 🚨 **Emergency Response** — Rapid route assessment for field teams
+-  **Civil & Infrastructure Engineering** — Pre-survey route checks before site visits
+-  **Mining & Quarrying Logistics** — Heavy vehicle route clearance checks
+-  **Tunnel & Underground Projects** — Access road monitoring for construction teams
+-  **Fleet & Logistics Management** — Real-time route hazard briefings
+-  **Urban Planning** — Road health mapping across city corridors
+-  **Emergency Response** — Rapid route assessment for field teams
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -136,7 +134,7 @@ User Input (Start / End Location)
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 <div align="center">
 
@@ -164,11 +162,11 @@ Rev. Geocode →  https://nominatim.openstreetmap.org/reverse
 OSM Tiles    →  https://{a|b|c}.tile.openstreetmap.org/{z}/{x}/{y}.png
 ```
 
-> ✅ **No API keys required.** All endpoints are public and free.
+>  **No API keys required.** All endpoints are public and free.
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -205,54 +203,45 @@ Pillow>=10.0.0
 2. Enter a **Starting Point** (e.g. `Chennai, India`)
 3. Enter a **Destination** (e.g. `Bangalore, India`)
 4. Toggle options: alternative routes, hazard scan, road images
-5. Click **🚀 Analyse Route**
+5. Click ** Analyse Route**
 6. Explore the live map, hazard report, road images, and navigation steps
 7. Download the full `.txt` field report
 
 ---
 
-## ✨ Features
+##  Features
 
-### 🗺️ Real-Time Interactive Map
+###  Real-Time Interactive Map
 Full-screen dark-theme Folium map with the primary route highlighted in orange and up to 2 alternative routes overlaid. Hazard markers are colour-coded by severity and clickable for full details.
 
-### ⚠️ Intelligent Hazard Detection
+---
+
+###  Intelligent Hazard Detection
 Queries OpenStreetMap's Overpass API at 6 sampled waypoints along the route. Detects and classifies:
-- 🚫 Road blocked / no access
-- 🏗️ Active construction zones
-- 🚧 Highway construction corridors
-- 🔒 Barriers and access restrictions
+-  Road blocked / no access
+-  Active construction zones
+-  Highway construction corridors
+-  Barriers and access restrictions
 
 Each hazard card shows the **exact km from start**, place name, severity badge, and GPS coordinates.
 
-### 🔀 Smart Route Alternatives
+---
+
+###  Smart Route Alternatives
 OSRM computes up to 3 driving route alternatives. All routes are rendered simultaneously on the map with distance and estimated time for easy comparison.
 
-### 📷 Road Condition Images
+###  Road Condition Images
 At each sampled waypoint, a 3×2 grid of live OpenStreetMap tiles is fetched, stitched into a single image using Pillow, and displayed inline with a red pin marker — no external redirects, no broken images.
 
-### 🧭 Turn-by-Turn Navigation
+###  Turn-by-Turn Navigation
 Full step-by-step manoeuvre instructions extracted from the OSRM response, with distance and time per segment.
 
-### 📄 Downloadable Field Report
+###  Downloadable Field Report
 Auto-generated structured `.txt` report including journey summary, all hazard details with coordinates, and route comparison — ready for field teams.
 
 ---
 
-## 📁 Project Structure
-
-```
-roadmind-ai/
-│
-├── app.py                  # Main Streamlit application
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
-└── LICENSE                 # MIT License
-```
-
----
-
-## 🗺️ Roadmap
+##  Roadmap
 
 - [ ] Real-time traffic overlay via OpenTraffic
 - [ ] AI image analysis of road surface quality (YOLOv8)
@@ -266,7 +255,7 @@ roadmind-ai/
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome.
 
@@ -278,13 +267,13 @@ Contributions, issues, and feature requests are welcome.
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 <div align="center">
 
@@ -292,30 +281,17 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 **Hovarthan S**
 
-*AI Innovator · Software Engineer · Geospatial Systems*
+*AI Innovator · ML Developer · Data Scientist*
 
-[![GitHub](https://img.shields.io/badge/GitHub-@hovarthans-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hovarthans)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hovarthan_S-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/hovarthans)
-[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hovarthan@email.com)
+[![GitHub](https://img.shields.io/badge/GitHub-@hovarthans-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hovarthan21)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hovarthan_S-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hovarthan-s-06114b281/)
+[![Email](https://img.shields.io/badge/Email-Contact_Me-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:hovarthano4@egmail.com)
 
 <br/>
 
 > *"Building intelligent systems that make the physical world smarter, safer, and more navigable."*
 
 </div>
-
----
-
-## 📬 Contact
-
-Have a question, idea, or collaboration proposal?
-
-| Channel | Details |
-|---|---|
-| 📧 **Email** | hovarthan@email.com |
-| 💼 **LinkedIn** | [linkedin.com/in/hovarthans](https://linkedin.com/in/hovarthans) |
-| 🐙 **GitHub** | [github.com/hovarthans](https://github.com/hovarthans) |
-| 🐦 **Twitter / X** | [@hovarthans](https://twitter.com/hovarthans) |
 
 ---
 
